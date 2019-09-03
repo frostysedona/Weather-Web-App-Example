@@ -1,0 +1,75 @@
+extends layout
+
+block content
+    script(src='/javascripts/weatherScript.js')
+    
+    div.row
+        h1 Here is the weather for #{name}
+        table.table.table-striped.table-hover.table-sm.table-responsive
+            thead.thead-dark
+                tr
+                    th(scope='col') Description
+                    th(scope='col') Value
+            tbody
+                tr
+                    th(scope='row') Conditions
+                    td #{weather[0].description}
+                tr
+                    th(scope='row') Temperature
+                    td.temp #{main.temp} &deg;F
+                tr
+                    th(scope='row') High
+                    td.temp #{main.temp_max} &deg;F
+                tr
+                    th(scope='row') Low
+                    td.temp #{main.temp_min} &deg;F
+                tr
+                    th(scope='row') Humidity
+                    td #{main.humidity} &#37;
+                tr
+                    th(scope='row') Pressure
+                    td #{main.pressure} hPa
+                tr
+                    th(scope='row') Wind Speed
+                    td #{wind.speed} mi/hr
+                tr
+                    th(scope='row') Cloudiness
+                    td #{clouds.all} &#37;
+        
+
+        form(name="zip-form", method="POST",action="")
+            div.form-group
+                label(for='zip') Enter Zip:
+                input#zip.form-control(type='number',name='zip')
+                small#zip-warning.form-text.text-muted NOTE: US only - Zip given will provide closest matching city
+            button#zip-submit.btn.btn-primary(type='submit') Submit
+
+        h5 Weather Information Provided By:
+            a(href='https://openweathermap.org') Open Weather
+
+        br
+        table.table
+            caption
+            strong Popular City Zip Codes
+            thead.thead
+                tr
+                    th(scope='col') City
+                    th(scope='col') Zip
+            tbody
+                tr
+                    td Los Angeles, CA
+                    td 90011
+                tr
+                    td Houston, TX
+                    td 77084
+                tr
+                    td New York, NY
+                    td 10002
+                tr
+                    td Chicago, IL
+                    td 60629
+                tr 
+                    td Anchorage, AK
+                    td 99501
+
+    

@@ -1,0 +1,35 @@
+/* style.css */
+
+body {
+  padding: 65px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(240,240,240);
+  
+}
+/* My version of Bootstrap didn't support this class so I made it myself */
+.thead-dark {
+  color: #fff;
+  background-color: #373a3c;
+}
+/*----------*/
+
+
+.temp-hot{
+  color: red;
+}
+
+.temp-warm {
+  color: orange;
+}
+
+.temp-fair {
+  color: green;
+}
+
+.temp-cool {
+  color: deepskyblue;
+}
+
+.temp-cold {
+  color: darkviolet;
+}

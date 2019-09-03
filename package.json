@@ -1,0 +1,25 @@
+{
+  "name": "weather-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "jwt-simple": "^0.5.1",
+    "mongoose": "^5.0.13",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "request": "^2.85.0",
+    "serve-favicon": "~2.4.5"
+  },
+  "description": "A simple website that shows current weather conditions using the OpenWeather API",
+  "main": "app.js",
+  "author": "William A Zykan",
+  "license": "MIT"
+}

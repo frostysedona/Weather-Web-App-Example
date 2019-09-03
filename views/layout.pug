@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width', initial-scale=1)
+
+    //- TODO: Upgrade to latest Bootstrap version
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    div.row
+        nav#main-navbar.navbar.navbar-inverse.navbar-fixed-top
+            div.container-fluid
+                div.navbar-header
+                  img(src='/images/favicon.ico',alt='logo').navbar-brand
+                ul.nav.navbar-nav
+                    
+                    li#weather-tab
+                        a(href='/weather') Weather
+
+    block content
